@@ -1,0 +1,273 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+input, select, textarea{
+	border: 1px solid #a9a9a9 !important;
+	box-shadow: none;
+	min-height: 32px;
+	border-radius: 0px !important;
+}
+iframe{
+	border: 0px;
+	min-height: 1200px;
+	width: 100%;
+	/*background: white url("ring.gif") no-repeat top 70px center;*/
+}
+#boxresults{
+	position: relative;
+	overflow: hidden;
+}
+.loadingbox:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(255,255,255,0.8) url("ring.gif") no-repeat top 50px center;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+a{
+	text-decoration: none;
+	color: #1976d2;
+}
+body{
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	background-color: #f5f5f5;
+	color: #616161 !important;
+	font-size: 16px;
+    font-weight: 400;
+}
+input, select, button{
+	font-size: 16px;
+	padding: 5px;
+	color: #272727;
+}
+h1{
+	margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+img{
+	max-width: 100%;
+}
+.displayblock{
+	display: block !important;
+}
+.demo-ribbon{
+	width: 100%;
+    height: 200px;
+    background-color: #bbdefb;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+	max-width: 100%;
+	min-height: 300px;
+	margin-top: -180px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.box-white{
+	background: white;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+#results .job{
+	padding: 20px 0;
+    background: #fff;
+    border-radius: 2px;
+    border-bottom: 1px solid #dadada;
+}
+#results .job:first-child{
+	padding-top: 0;
+}
+#results .job a{
+	line-height: 1.4;
+	margin-bottom: 5px;
+	display: inline-block;
+	font-size: 18px;
+}
+#results .job .company_location{
+	font-size: 14px;
+}
+#pagination{
+	padding: 20px 0px 10px;
+}
+#pagination a{
+	display: inline-block;
+	background: #f86c61;
+	color: white;
+	border-radius: 2px;
+	padding: 8px 14px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+#boxSearch, #categorylist, #homebox, #loading{
+	display: none;
+}
+#categorylist select{
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#boxSearch input,  #categorylist input{
+	width: 100%;
+	margin-right: 0%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#boxSearch button, #categorylist button{
+	width: 100%;
+	margin-left: 0%;
+	border: 1px solid #f44336;
+	background: #f44336;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+#homebox{
+	padding: 0px;
+	text-align: center;
+}
+#homebox header{
+	line-height: 0;
+}
+#homebox .content1{
+	padding: 10px 20px 20px;
+}
+#homebox .content1 p{
+	line-height: 1.5;
+}
+#homebox header{
+	background: #ebebeb;
+}
+/*********/
+#featured, #loading{
+	position: relative;
+}
+#loading{
+	text-align: center;
+	font-size: 22px;
+	line-height: 1.2;
+}
+#featured:after, #featured:before, #loading:after, #loading:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: #009688;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	animation: featuredanimation 3s ease-in-out infinite;
+}
+#loading:after, #loading:before{
+	animation: featuredanimation 1.5s ease-in-out infinite;
+}
+#featured:before, #loading:before{
+	bottom: auto;
+	top: 0px;
+}
+@keyframes featuredanimation {
+    0% {width: 0%;}
+    80% {width: 100%;}
+}
+#featured h2{
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+#featured a{
+	line-height: 1.5;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 20px;
+}
+#featured p{
+	font-size: 16px;
+	line-height: 1.3;
+}
+#featured .job{
+	padding: 20px 0;
+    background: #fff;
+    border-radius: 2px;
+    border-bottom: 1px solid #dadada;
+}
+#featured .job.first{
+	padding-top: 0;
+}
+#featured .job:last-child{
+	border-bottom: 0px;
+}
+#featured .job.image{
+	text-align: center;
+}
+@media screen and (max-width: 780px){
+	#boxSearch input{
+	width: 100%;
+	margin-right: 0%;
+	text-align: center;
+	}
+	#boxSearch button{
+	width: 100%;
+	margin-left: 0%;
+	margin-top: 15px;
+	border: 1px solid #f44336;
+	background: #f44336;
+	color: white;
+	padding: 10px;
+	}
+	#homebox img{
+	width: 100%;
+	}
+}

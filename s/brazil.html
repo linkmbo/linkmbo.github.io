@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Procure por trabalho no Brasil</title>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75243375-4', 'auto');
+  ga('send', 'pageview');
+
+	</script>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="demo-ribbon"></div>
+<div class="container">
+	<script type='text/javascript'>
+	var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : sParameterName[1];
+	        }
+	    }
+	};
+	function whatever(value){
+		getSearch = getUrlParameter('loc');
+		getBox = getUrlParameter('box');
+		getcategories = getUrlParameter('cat');
+		gethome = getUrlParameter('hom');
+		if(! getSearch){
+	   	locationc = 'Brasil';
+		}else{
+			locationc = getSearch;
+		}
+		if(getBox){
+			$("#boxSearch").addClass("displayblock");
+		}
+		if(getcategories){
+			$("#categorylist").addClass("displayblock");
+		}
+		if(gethome){
+			$("#homebox, #loading").addClass("displayblock");
+			setTimeout(
+			  function() 
+			  {
+			  $("#loading").attr("style","display: none !important");
+			  }, 1000);
+			$(".cityname").html(locationc);
+			$(".imagesrc").attr('src', 'images_brazil/'+gethome+'.jpg');
+		}
+		//REDIRECT
+		if(value != undefined){
+			var query1 = value;
+			var fullurl = "http://www.indeed.com.br/jobs?q="+query1+"&l="+locationc+"&indpubnum=6499941817618209&chnl=brazil";
+			window.location.href = fullurl;
+			$("#boxresults").addClass("loadingbox");
+		}
+		//END REDIRECT
+		var queryloc = value;
+		if(value == undefined){
+			queryloc = "";
+		}
+		
+		ind_pub = '6499941817618209';
+		ind_el = 'indJobContent';
+		ind_pf = '';
+		ind_q = queryloc;
+		ind_l = locationc;
+		ind_chnl = 'brazil';
+		ind_n = 10;
+		ind_d = 'http://www.indeed.com.br';
+		ind_t = 40;
+		ind_c = 30;
+		ind_pgn = 1;
+		ind_pgnCnt = 0;
+		$.getScript("http://www.indeed.com.br/ads/jobroll-widget-v3.js", function(){});
+	}
+		$(function() {
+		    whatever();
+		    $( "#categoireslist" ).change(function() {
+		 	 var listval = $( "#categoireslist option:selected" ).val();
+		 	 whatever(listval);
+			});
+		});
+	</script>
+	
+	<div id="loading" class="box-white">
+			Loading...
+	</div>
+	
+	<div class="box-white" id="homebox">
+		<header>
+			<img src="" alt="" class="imagesrc">
+		</header>
+		<div class="content1">
+			<h1>Procure por trabalho no <span class="cityname"></span></h1>
+			<p>Encontre novas oportunidades de trabalho diariamente, use a nossa ferramenta de pesquisa de postos de trabalho para encontrar empregos na sua área. </p>
+		</div>
+		
+	</div>
+	<div class="box-white" id="boxSearch">
+		<input type="text" placeholder="cargo, palavra-chave" id="inputbuscar" ><button onclick="whatever(document.getElementById('inputbuscar').value)">Encontre Emprego</button>
+	</div>
+
+	<div class="box-white" id="categorylist">
+		<select name="" id="categoireslist">
+			<option value="">Todas as categorias</option>
+				<option>Administrador</option>
+				<option>Advogado</option>
+				<option>Aeromoça</option>
+				<option>Agente</option>
+				<option>Ajudante</option>
+				<option>Analista</option>
+				<option>Animador</option>
+				<option>Armazenista</option>
+				<option>Arquiteto</option>
+				<option>Arquivo</option>
+				<option>Artista</option>
+				<option>Assessor</option>
+				<option>Assistente</option>
+				<option>Assistente social</option>
+				<option>Associado</option>
+				<option>Ator</option>
+				<option>Atriz</option>
+				<option>Auditor</option>
+				<option>Auditor</option>
+				<option>Auxiliar</option>
+				<option>Babá</option>
+				<option>Bombeiro</option>
+				<option>Cabeça</option>
+				<option>Caixa</option>
+				<option>Capitão</option>
+				<option>Cartografo</option>
+				<option>Chefe</option>
+				<option>Cientista</option>
+				<option>Cinegrafista</option>
+				<option>Comandante</option>
+				<option>Comissário de bordo</option>
+				<option>Comprador</option>
+				<option>Comunicador social</option>
+				<option>Condutor</option>
+				<option>Consultor</option>
+				<option>Contador</option>
+				<option>Coordenador</option>
+				<option>Corredor</option>
+				<option>Costureira</option>
+				<option>Desenhista</option>
+				<option>Despachantes</option>
+				<option>Developer</option>
+				<option>Diretor</option>
+				<option>Economista</option>
+				<option>Editor</option>
+				<option>Editor</option>
+				<option>Encarregado</option>
+				<option>Enfermeira</option>
+				<option>Engenheiro</option>
+				<option>Especialista</option>
+				<option>Estudante</option>
+				<option>Executivo</option>
+				<option>Facilitador</option>
+				<option>Farmacêutico</option>
+				<option>Fisioterapeuta</option>
+				<option>Fotógrafo</option>
+				<option>Funcionário</option>
+				<option>Garçom</option>
+				<option>Garçom</option>
+				<option>Gerente</option>
+				<option>Geólogo</option>
+				<option>Governanta</option>
+				<option>Ilustrador</option>
+				<option>Impulsionadores</option>
+				<option>Inspetor</option>
+				<option>Instrutor</option>
+				<option>Investigador</option>
+				<option>Jornalista</option>
+				<option>Locutor</option>
+				<option>Líder de Projeto</option>
+				<option>Manicure</option>
+				<option>Maquinista</option>
+				<option>Mecânico</option>
+				<option>Mensageiro</option>
+				<option>Mercadorias</option>
+				<option>Mordomo</option>
+				<option>Médico</option>
+				<option>Músico</option>
+				<option>Notação</option>
+				<option>Odontologia</option>
+				<option>Operador</option>
+				<option>Orientador</option>
+				<option>Planejador</option>
+				<option>Professor</option>
+				<option>Profissional</option>
+				<option>Programador</option>
+				<option>Promotor</option>
+				<option>Proprietário</option>
+				<option>Psicólogo</option>
+				<option>Publicidade</option>
+				<option>Químico</option>
+				<option>Recepcionista</option>
+				<option>Representante</option>
+				<option>Representante comercial</option>
+				<option>Repórter</option>
+				<option>Secretaria</option>
+				<option>Supervisor</option>
+				<option>Tesoureiro</option>
+				<option>Topógrafo</option>
+				<option>Tradutor</option>
+				<option>Treinador</option>
+				<option>Treinador</option>
+				<option>Técnico</option>
+				<option>Vendedor</option>
+				<option>Vigilante</option>
+				<option>Zootecnia</option>
+		</select>
+	</div>
+	<div class="box-white" id="boxresults">
+		<div id='indeed_widget_wrapper' style=''>
+		<div id='indJobContent' class=""></div>
+
+		<div id='indeed_search_wrapper'>
+		<script type='text/javascript'>
+		function clearDefaults() {
+		var formInputs = document.getElementById('indeed_jobform').elements;
+		for(var i = 0; i < formInputs.length; i++) {
+		if(formInputs[i].value == 'cargo, palavra-chave' || formInputs[i].value == 'cidade, estado') {
+		formInputs[i].value = '';
+		}
+		}
+		}
+		</script>
+		</div>
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>
