@@ -1,7 +1,0 @@
-<div id="featured" class="box-white">
-		<h2>FEATURED</h2>
-		<div class="job first">
-			<a href="http://ca.indeed.com/jobs?l=canada&indpubnum=6499941817618209" target="indeed_search" >Would You Like to Find a JOB Today?</a>
-			<p>Looking for exciting jobs or a new career? Find a new job hiring today.</p>
-		</div>		
-	</div>
