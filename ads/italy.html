@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	$(function() {
+			
+    var i = setInterval(function ()
+    {
+        if ($('#results').length)
+        {
+            clearInterval(i);
+		
+		
+            // safe to execute your code here
+		
+		//jQuery("#indJobContent #results .job a").hide();
+		
+		$( "#indJobContent #results .job" ).each(function() {
+		var str = jQuery(this).find("a").attr( "href" );
+		var res = str.replace("//www", "http://www");
+		jQuery(this).find("a").attr( "href", res);
+		});
+			
+		
+		
+		
+        }
+    }, 100);
+		
+		function removewww2(){
+			$( "#indJobContent #results .job" ).each(function() {
+		var str = jQuery(this).find("a").attr( "href" );
+		var res = str.replace("//www", "http://www");
+		jQuery(this).find("a").attr( "href", res);
+			});
+			
+		
+		};
+		
+		$('#boxresults').bind('DOMSubtreeModified', function(e) {
+			removewww2();
+    		//console.log('element: ', e.target, ' was inserted');
+		});
+		
+});
+</script>
