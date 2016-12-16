@@ -10,7 +10,15 @@
 // 		jQuery("#indJobContent #results .job a").hide();
 // 	console.log("done5");
 // 	});
-	window.onload = function() {
-  	console.log("test33");
-	};
+	$(function() {
+    var i = setInterval(function ()
+    {
+        if ($('#results').length)
+        {
+            clearInterval(i);
+            // safe to execute your code here
+		console.log("aa");
+        }
+    }, 100);
+});
 </script>
