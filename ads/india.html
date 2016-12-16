@@ -6,10 +6,6 @@
 		</div>		
 </div>
 <script type="text/javascript">
-// 	jQuery( window ).load(function() {
-// 		jQuery("#indJobContent #results .job a").hide();
-// 	console.log("done5");
-// 	});
 	$(function() {
     var i = setInterval(function ()
     {
@@ -17,8 +13,21 @@
         {
             clearInterval(i);
             // safe to execute your code here
-		console.log("a1");
-		jQuery("#indJobContent #results .job a").hide();
+		
+		//jQuery("#indJobContent #results .job a").hide();
+		
+		$( "#indJobContent #results .job" ).each(function() {
+  		$( this).addClass( "foo" );
+		var str = jQuery(this).find("a").attr( "href" );
+			
+			//var str = "Visit Microsoft!";
+		var res = str.replace("//www", "http://www");
+			console.log(res);
+		});
+		
+		
+		
+		console.log("a2");
         }
     }, 100);
 });
