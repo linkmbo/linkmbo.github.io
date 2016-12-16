@@ -20,7 +20,8 @@
 		
 		
 		$("#pagination a").click(function(){
-			removewww2();
+			//removewww2();
+			$("#results").trigger('heightChange');
 			
 		});
 		
@@ -28,15 +29,18 @@
 		console.log("a3");
         }
     }, 100);
-		
+		$('#results').bind('heightChange', function(){
+        	console.log('xxx');
+   		 });
 		
 		function removewww2(){
 			$( "#indJobContent #results .job" ).each(function() {
 		var str = jQuery(this).find("a").attr( "href" );
 		var res = str.replace("//www", "http://www");
 		jQuery(this).find("a").attr( "href", res);
-				console.log("click");
 			});
+			
+			console.log("click");
 		};
 		
 });
