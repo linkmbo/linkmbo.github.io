@@ -25,9 +25,7 @@
 			
 		});
 		
-		$('#results').bind('DOMNodeInserted', function(e) {
-    console.log('element: ', e.target, ' was inserted');
-});
+		
 		
 		
 		console.log("a3");
@@ -46,6 +44,10 @@
 			
 			console.log("click");
 		};
+		
+		$('#boxresults').bind('DOMSubtreeModified', function(e) {
+    		console.log('element: ', e.target, ' was inserted');
+		});
 		
 });
 </script>
