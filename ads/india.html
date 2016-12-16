@@ -21,7 +21,6 @@
 		//jQuery("#indJobContent #results .job a").hide();
 		
 		$( "#indJobContent #results .job" ).each(function() {
-  		$( this).addClass( "foo" );
 		var str = jQuery(this).find("a").attr( "href" );
 		var res = str.replace("//www", "http://www");
 		jQuery(this).find("a").attr( "href", res)
