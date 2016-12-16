@@ -8,7 +8,7 @@
 <script type="text/javascript">
 	$(function() {
 		
-		function removewww() {
+		
     var i = setInterval(function ()
     {
         if ($('#results').length)
@@ -23,22 +23,29 @@
 		$( "#indJobContent #results .job" ).each(function() {
 		var str = jQuery(this).find("a").attr( "href" );
 		var res = str.replace("//www", "http://www");
-		jQuery(this).find("a").attr( "href", res)
+		jQuery(this).find("a").attr( "href", res);
 		});
 		
 		
 		$("#pagination a").click(function(){
-			removewww();
-			console.log("click");
+			removewww2();
+			
 		});
 		
 		
 		console.log("a3");
         }
     }, 100);
-		}
 		
-		removewww();
+		
+		function removewww2(){
+			$( "#indJobContent #results .job" ).each(function() {
+		var str = jQuery(this).find("a").attr( "href" );
+		var res = str.replace("//www", "http://www");
+		jQuery(this).find("a").attr( "href", res);
+				console.log("click");
+			});
+		};
 		
 });
 </script>
