@@ -14,6 +14,8 @@
         if ($('#results').length)
         {
             clearInterval(i);
+		
+		
             // safe to execute your code here
 		
 		//jQuery("#indJobContent #results .job a").hide();
@@ -26,6 +28,11 @@
 		});
 		
 		
+		$("#pagination a").click(function(){
+			removewww();
+			console.log("click");
+		});
+		
 		
 		console.log("a3");
         }
@@ -33,8 +40,6 @@
 		}
 		
 		removewww();
-		$("#pagination a").click(function(){
-			removewww();
-		});
+		
 });
 </script>
