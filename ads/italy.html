@@ -11,20 +11,15 @@
 		
 		};
 		
-		$('#boxresults').bind('DOMSubtreeModified', function(e) {
-			removewww2();
-    		//console.log('element: ', e.target, ' was inserted');
-		});
-		
-		MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 var observer = new MutationObserver(function(mutations, observer) {
     // fired when a mutation occurs
-    console.log("aaaa");
+   removewww2();
     // ...
 });
 		
-		// define what element should be observed by the observer
+// define what element should be observed by the observer
 // and what types of mutations trigger the callback
 observer.observe(document, {
   subtree: true,
