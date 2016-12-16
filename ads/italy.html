@@ -11,11 +11,16 @@
 		
 		};
 		
+		$('#boxresults').bind('DOMSubtreeModified', function(e) {
+			removewww2();
+		});
+		
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 var observer = new MutationObserver(function(mutations, observer) {
     // fired when a mutation occurs
    removewww2();
+	console.log("bbb");
     // ...
 });
 		
