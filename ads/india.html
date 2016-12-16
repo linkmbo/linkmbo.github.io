@@ -25,13 +25,17 @@
 			
 		});
 		
+		$('#results').bind('DOMNodeInserted', function(e) {
+    console.log('element: ', e.target, ' was inserted);
+});
+		
 		
 		console.log("a3");
         }
     }, 100);
-		$('#results').bind('heightChange', function(){
-        	console.log('xxx');
-   		 });
+		//$('#results').bind('heightChange', function(){
+        	//console.log('xxx');
+   		// });
 		
 		function removewww2(){
 			$( "#indJobContent #results .job" ).each(function() {
