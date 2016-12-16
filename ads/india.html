@@ -19,15 +19,13 @@
 		$( "#indJobContent #results .job" ).each(function() {
   		$( this).addClass( "foo" );
 		var str = jQuery(this).find("a").attr( "href" );
-			
-			//var str = "Visit Microsoft!";
 		var res = str.replace("//www", "http://www");
-			console.log(res);
+		jQuery(this).find("a").attr( "href", res)
 		});
 		
 		
 		
-		console.log("a2");
+		console.log("a3");
         }
     }, 100);
 });
