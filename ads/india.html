@@ -21,7 +21,7 @@
 		
 		$("#pagination a").click(function(){
 			//removewww2();
-			$("#results").trigger('heightChange');
+			//$("#results").trigger('heightChange');
 			
 		});
 		
@@ -46,7 +46,8 @@
 		};
 		
 		$('#boxresults').bind('DOMSubtreeModified', function(e) {
-    		console.log('element: ', e.target, ' was inserted');
+			removewww2();
+    		//console.log('element: ', e.target, ' was inserted');
 		});
 		
 });
