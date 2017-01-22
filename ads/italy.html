@@ -4,7 +4,7 @@
 		function removewww2(){
 			$( "#indJobContent #results .job" ).each(function() {
 		var str = jQuery(this).find("a").attr( "href" );
-		var res = str.replace("//it", "http://it");
+		var res = str.replace("//it.indeed.com", "http://it.indeed.com");
 		jQuery(this).find("a").attr( "href", res);
 			});
 		};
