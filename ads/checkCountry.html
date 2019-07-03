@@ -8,7 +8,7 @@ Hello <span id="user_ip"><span class="icon"><i class="loader"></i></span></span>
 <script type="application/javascript">
     function geoip(json){
         var userip      = document.getElementById("user_ip");
-        var countrycode = document.getElementById("user_countrycode");
+        var countrycode = document.getElementById("user_country");
         userip.textContent      = json.ip;
         countrycode.textContent = json.country_code;
     }
