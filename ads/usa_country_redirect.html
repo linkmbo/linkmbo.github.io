@@ -3,7 +3,7 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 <body>
-Hello <span id="user_ip"><span class="icon"><i class="loader"></i></span></span>. The IP you're behind has a country code of <span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>.
+<!-- Hello <span id="user_ip"><span class="icon"><i class="loader"></i></span></span>. The IP you're behind has a country code of <span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>.
 
 <script type="application/javascript">
     function geoip(json){
@@ -13,6 +13,12 @@ Hello <span id="user_ip"><span class="icon"><i class="loader"></i></span></span>
         countrycode.textContent = json.country_code;
     }
 </script>
-<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script> -->
+    
+    <script>
+    $.getJSON( "https://get.geojs.io/v1/ip/country.json", function( json ) {
+  console.log( "JSON Data: " + json.users[ 3 ].name );
+ });
+    </script>
 </body>
 </html>
